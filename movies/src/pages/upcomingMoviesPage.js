@@ -6,6 +6,7 @@ import MovieList from "../components/movieList";
 import Spinner from "../components/spinner";
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites';
 import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
+import AddToMustWatchIcon from "../components/cardIcons/addToMustWatch";
 
 const UpcomingMoviesPage = () => {
     const { data, error, isLoading, isError } = useQuery("upcoming", getUpcomingMovies);
@@ -29,7 +30,7 @@ const UpcomingMoviesPage = () => {
         title="Upcoming Movies"
         movies={movies}
         action={(movie) => {
-          return <PlaylistAddIcon movie={movie} />
+          return <AddToMustWatchIcon movie={movie} />
         }}
       />
   );
