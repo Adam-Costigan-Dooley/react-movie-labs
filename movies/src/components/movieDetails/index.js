@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Chip from "@mui/material/Chip";
 import Paper from "@mui/material/Paper";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
@@ -9,7 +9,8 @@ import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
 import MovieReviews from "../movieReviews"
-
+import { Link } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 
 const root = {
@@ -24,7 +25,9 @@ const chip = { margin: 0.5 };
 
 const MovieDetails = ({ movie }) => {  
     const [drawerOpen, setDrawerOpen] = useState(false);
+    
 
+  
 
   return (
     <>
@@ -71,6 +74,13 @@ const MovieDetails = ({ movie }) => {
     </li>
   ))}
 </Paper>
+
+<Link to={`/movies/${movie.id}/recommendations`}>
+        <Button variant="outlined" size="medium" color="primary">
+          View Recommendations ...
+        </Button>
+      </Link>
+
       <Fab
         color="secondary"
         variant="extended"
