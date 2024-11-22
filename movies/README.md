@@ -1,4 +1,12 @@
+Name: Adam Costigan Dooley
+
+Overview:
+This repository has my Movies App project, a React application that allows users to access the Movie Database (TMDB) API. Users can discover upcoming and popular movies, favourite and right reviews, while making use of detailed information on the movies.
+
+
+------------------------------------------------------------------------------------------------------------------
 Static Content
+------------------------------------------------------------------------------------------------------------------
 
 Upcoming Movies (/upcoming):
 Fetches a list of movies that will be released soon and may have early releases in theaters.
@@ -10,11 +18,17 @@ Retrieves a curated list of the most popular movies based on audience engagement
 Top-Rated Movies (/top-rated):
 Displays a list of highly rated films, sorted by viewer ratings on the API.
 
+
+------------------------------------------------------------------------------------------------------------------
 Parameterized Content
+------------------------------------------------------------------------------------------------------------------
 
 Recommended Movies (/movie/:id/recommendations):
 Suggests movies similar to the one currently being viewed.
 Recommendations are tailored based on the preferences of users who enjoyed the same movie.
+
+Movie Detailed Credits:
+Movies have their actors credited below the film in the detail menu.
 
 Watchlist Functionality:
 Users can add movies they want to watch to their personal "Must-Watch" list. This was added to the "recommended movies" to allow users to very quickly put together a suitable "Must-Watch" list.

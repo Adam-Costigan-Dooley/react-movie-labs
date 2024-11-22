@@ -41,7 +41,7 @@ export default function FilterMoviesCard(props) {
 
   const handleChange = (e, type, value) => {
     e.preventDefault();
-    props.onUserInput(type, value); // NEW
+    props.onUserInput(type, value); 
   };
 
   const handleTextChange = (e, props) => {
@@ -51,6 +51,16 @@ export default function FilterMoviesCard(props) {
   const handleGenreChange = (e) => {
     handleChange(e, "genre", e.target.value);
   };
+
+  const handleDateChange = (e) => {
+    handleChange(e, "releaseDate", e.target.value)
+  };
+
+  const handleOrderChange = (e) => {
+    handleChange(e, "releaseDateOrder", e.target.value);  
+  };
+
+
 
 
 
@@ -90,6 +100,26 @@ export default function FilterMoviesCard(props) {
                 </MenuItem>
               );
             })}
+          </Select>
+        </FormControl>
+
+        <FormControl sx={{ ...formControl }}>
+          <InputLabel id="release-date-label">Release Date</InputLabel>
+          <TextField
+            labelId="release-date-label"
+            id="releaseDate"
+            type="date"
+            variant="filled"
+            value={props.releaseDateFilter}
+            onChange={handleDateChange}
+          />
+        </FormControl>
+
+        <FormControl sx={{ ...formControl }}>
+          <InputLabel>Sort By Date</InputLabel>
+  <Select value={props.releaseDateOrder} onChange={handleOrderChange}>
+  <MenuItem value="Older">Older</MenuItem>
+   <MenuItem value="Newer">Newer</MenuItem>
           </Select>
         </FormControl>
       </CardContent>
