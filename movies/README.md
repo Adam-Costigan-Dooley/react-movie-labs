@@ -30,12 +30,16 @@ Recommendations are tailored based on the preferences of users who enjoyed the s
 Movie Detailed Credits:
 Movies have their actors credited below the film in the detail menu.
 
-Watchlist Functionality:
-Users can add movies they want to watch to their personal "Must-Watch" list. This was added to the "recommended movies" to allow users to very quickly put together a suitable "Must-Watch" list.
-Includes a dedicated Watchlist Page to easily manage and view saved titles.
-
-Endpoints Utilized:
+Primary Endpoints Utilized:
 /movie/now_playing: Fetches currently playing movies.
 /movie/popular: Retrieves popular movie titles.
 /movie/top_rated: Returns a list of top-rated movies.
 /movie/:id/recommendations: Provides recommended movies based on a specific movie.
+/movies/must-watch: The list of must watch movies from the recommendations or upcoming lists.
+
+------------------------------------------------------------------------------------------------------------------
+Additional Contest
+------------------------------------------------------------------------------------------------------------------
+Watchlist Functionality:
+Users can add movies they want to watch to their personal "Must-Watch" list. This was added to the "recommended movies" to allow users to very quickly put together a suitable "Must-Watch" list.
+Includes a dedicated Watchlist Page to easily manage and view saved titles.
